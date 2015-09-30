@@ -1,0 +1,383 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}
+
+
+
+/* -----------------
+
+SIXTEEN BASE STYLING
+
+-----------------  */
+body{
+  width: 360px;
+  margin:0;
+  font-family: 'Source Sans Pro', 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  font-size:16px;
+}
+
+h2{
+  color: #454545;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 em{
+  font-style: normal;
+  color: #acd373;
+}
+
+h3{
+  color: #acd373;
+  font-size: 18px;
+}
+
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+section{
+  padding: 30px;
+}
+
+
+/* ------------
+
+Special Pieces (reusable)
+
+------------ */
+
+/*
+.divider{
+  border: none;
+  height: 6px;
+  width: 100px;
+  background-image: url(images/divider-grey.png);
+}
+
+.white-bar{
+  background-image: url(images/divider-white.png);
+}
+*/
+
+.quote{
+  text-align: center;
+  font-family: 'Droid Serif', serif;
+  font-size: 12px;
+}
+
+
+/*//////////////////
+
+header section
+
+////////////////// */
+header{
+  background-color: #acd373;
+  height: 40px;
+  position: relative
+}
+.logo{
+  display: inline-block;
+  margin: 8px 0 0 30px;
+}
+nav{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #89a85c;
+  background-image: url(images/btn-tg-nav.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*greeting section*/
+
+.greeting {
+    background:#9abd67 url(images/bkg-header-silhouette.png) no-repeat bottom;
+    height: 350px;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.greeting > div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+.greeting h1{
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.greeting .arrow-down{
+  display: block;
+  width: 25px;
+  height: 14px;
+  margin: 0 auto;
+  background: url(images/arrow-down.png) no-repeat;  
+  position: relative;
+  top: 75px;
+}
+.greeting span{
+  font-style: italic;
+  font-size: 13px;
+  font-family: 'Droid Serif', 'Times New Roman', serif;
+}
+/*   who we are section   */
+
+.who-we-are{
+  
+}
+.who-we-are .iphone {
+  display: block;
+  margin: 13px auto 36px auto;
+}
+
+.who-we-are h2{
+  background: url(images/icon-man.png) no-repeat;
+  height: 30px;
+  padding-left: 38px;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.who-we-are p{
+  font-size: 13px;
+}
+.who-we-are a{
+  color: #acd473;
+  text-decoration: none;
+  border-color: #acd473 1px solid;
+  padding: 11px 15px;
+  font-style: italic;
+  margin: 17px 0;
+  display: inline-block;
+  font: italic 11px DroidSerif;
+}
+
+.video-learnmore {
+  padding: 0
+}
+
+/* --------------
+
+   services section 
+
+-------------- */
+.service-list{
+/*  border:5px solid red;*/
+}
+.service-item * {
+/*  outline: 1px solid transparent;*/
+}
+
+.service-item {
+/*  border:5px solid green;*/
+  margin: 0 0 10px;
+}
+/*
+
+.graphic-design{
+  background: url(images/icon-paintbrush.png) no-repeat 0 5px;
+}
+.mobile{
+  background: url(images/icon-mobile.png) no-repeat 0 5px;
+}
+.web-dev{
+  background: url(images/icon-monitor.png) no-repeat 0 5px;
+}
+*/
+
+.service-img{
+  display: inline-block;
+  vertical-align: top;
+  width:40px;
+/*  border: 5px solid purple;*/
+}
+
+.service-info{
+/*  border: 5px solid purple;*/
+width: 200px;
+display: inline-block;
+vertical-align: top;
+margin-left: 15px;
+}
+
+.service-info h3{
+  margin: 0 0 8px;
+}
+.service-info p{
+  margin: 0;
+}
+.testimonials{
+  background:rgba(0,0,0,0.5);
+  color:#f7f7f7;
+  background: url(images/background.png) no-repeat;
+  background-size: cover;
+}
+.testimonial-quote{
+  border: 1px solid #f7f7f7;
+  padding: 20px 10px 26px 10px;
+  position: relative;
+}
+.testimonial-quote p{
+  font-family: 'Droid Serif', serif;
+  font-size: 12px;
+  margin: 0;
+}
+
+.testimonials h2{
+  color: #f7f7f7;
+  font-size: 18px;
+}
+.testimonial-company{
+  margin: 50px 0;
+}
+
+.testimonial-company img{
+  border-radius: 50%;
+}
+
+.testimonial-company img, 
+.company-details{
+  display: inline-block;
+  vertical-align: middle;
+}
+.company-details{
+ width: 190px;
+}
+
+.company-details{
+  margin-left: 22px;
+}
+
+.company-details h3{
+  margin-top: 0;
+  margin-bottom: 10px; 
+  text-transform: uppercase;
+/*  font-variant: small-caps;  */
+}
+
+.company-details a{
+  color: rgb(247, 247, 247);
+  font-family: DroidSerif;
+  font-size: 14.8px;
+  font-style: italic;
+  text-decoration: none;
+}
+textarea{
+  display: block;
+  resize: none;
+}
+
+.social {
+  background: #ebebeb;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  padding: 10px;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0px;  
+}
+
+.employee-card {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding-top: 54px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+}
+
+.headshot {   
+  position: absolute;
+  top: -40px;
+  left:58px;
+}
+
+.employee-showcase {
+  position: relative;
+}
+
+.headshot {
+  
+}
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+}
+
+.about-team {
+  background: #acd373;
+  color: #f7f7f7;
+}
+
+.employee-card h3,
+.employee-card h4{
+  text-align: center
+}
+
+.about-team h2 {
+  color: #f7f7f7;
+}
+
+.quote {
+  display: block
+}
+
+
+.testimonial-selector .selected{
+    background: White;
+}
+
+
+.testimonial-selector span{
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border: 1px solid White;
+  border-radius: 50%;
+}
+
+.testimonial-selector {
+    text-align: center;
+}
+
+.quote-marks {
+  position: absolute;
+  right: 27px;
+  bottom: 15px;
+}
+
+.quote-triangle {
+  position: absolute;
+  left: -1px;
+  bottom: -20px;
+}
+
+.blog-post {
+  width: 160px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.blog {
+  padding: 30px 0;
+}
