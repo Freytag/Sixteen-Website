@@ -17,7 +17,7 @@ SIXTEEN BASE STYLING
 body{
   width: 360px;
   margin:0;
-  font-family: 'Source Sans Pro', 'Arial', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   background-color: #f7f7f7;
   font-size: 13px;
 }
@@ -25,7 +25,7 @@ body{
 h2{
   color: #454545;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
   margin: 14px 0 11px 0;
@@ -365,6 +365,7 @@ textarea{
   display: inline-block;
   vertical-align: top;
   margin: 0 0 16px 12px;
+  position: relative;
 }
 
 .blog {
@@ -469,6 +470,7 @@ textarea{
   padding: 8px;
   width: 100%;
   margin: 0;
+
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -479,7 +481,8 @@ textarea{
 }
 
 .contact-form label,
-.contact-form input,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
 .contact-form textarea{
   display: block;
   width: 100%;
@@ -488,7 +491,8 @@ input::-webkit-input-placeholder{
   color: white;
 }
 
-.contact-form input,
+.contact-form input[type="text"],
+.contact-form input[type="email"],
 .contact-form textarea{
   height: 28px;
   -webkit-appearance:none;
@@ -567,4 +571,11 @@ input::-webkit-input-placeholder{
 
 .testimonial-control {
   margin-top: 30px;
+}
+
+.post-type {
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  left:  60px;
 }
