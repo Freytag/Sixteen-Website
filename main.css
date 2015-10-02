@@ -1,12 +1,12 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,optgroup,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}table{border-collapse:collapse;border-spacing:0}
 
-
 html {
-  box-sizing: border-box;
+  box-sizing: border-box
 }
-*, *:before, *:after {
-  box-sizing: inherit;
+
+*,:before,:after {
+  box-sizing: inherit
 }
 
 /* -----------------
@@ -14,160 +14,182 @@ html {
 SIXTEEN BASE STYLING
 
 -----------------  */
-body{
-  width: 360px;
-  margin:0;
-  font-family: 'Source Sans Pro', sans-serif;
+body {
+  margin: 0;
+  font-family: 'Source Sans Pro',sans-serif;
   background-color: #f7f7f7;
-  font-size: 13px;
+  font-size: 13px
 }
 
-h2{
+h1 {
+  font-size: 1.538em;
+  font-weight: 700;
+  text-transform: uppercase
+}
+
+h2 {
   color: #454545;
-  font-size: 18px;
+  font-size: 1.385em;
   font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  margin: 14px 0 11px 0;
+  margin: 14px 0 11px
 }
 
-h2 em{
+h2 em {
   font-style: normal;
-  color: #acd373;
+  color: #acd373
 }
 
-h3{
+h3 {
   color: #acd373;
-  font-size: 14px;
+  font-size: 1.077em;
   text-transform: uppercase;
-  margin: 10px 0;
+  margin: 10px 0
 }
 
-ul{
+ul {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0
 }
 
-section{
-  padding: 30px;
+section {
+  padding: 30px
 }
 
-
-/* ------------
+/* --------------
 
 Special Pieces (reusable)
 
------------- */
-
-.quote{
+-------------- */
+.quote {
   text-align: center;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Droid Serif',serif;
   font-size: 12px;
-  margin: 11px 0;
+  margin: 11px 0
 }
 
-.learn-more{
+.learn-more {
   display: inline-block;
   margin: 17px 0;
   padding: 11px 15px;
   color: #acd473;
   text-decoration: none;
   border: 1px solid #acd473;
-  font-family: 'Droid Serif', serif;
+  font-family: 'Droid Serif',serif;
   font-style: italic;
-  font-size: 11px; 
+  font-size: 11px
 }
-.learn-more.white{
+
+.learn-more.white {
   color: #f7f7f7;
   padding: 10px;
-  border-color: #f7f7f7;
+  border-color: #f7f7f7
 }
 
 .divider {
   display: block;
-  margin: 10px auto;
+  margin: 10px auto
 }
 
+.quote {
+  display: block
+}
 
-/*//////////////////
+/* --------------
 
-header section
+   HEADER SECTION
 
-////////////////// */
-header{
+-------------- */
+header {
   background-color: #acd373;
   height: 40px;
-  position: relative
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+  transition: all .5s
 }
-.logo{
+
+.logo {
   display: inline-block;
-  margin: 8px 0 0 30px;
+  margin: 8px 0 0 30px
 }
-nav{
+
+.logo img {
+  height: 25px
+}
+
+nav {
   width: 40px;
   height: 40px;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   background-color: #89a85c;
   background-image: url(images/btn-tg-nav.png);
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center
 }
 
-/*greeting section*/
+.site-links {
+  display: none
+}
+/* --------------
 
+   GRETTING SECTION
+
+-------------- */
 .greeting {
-  background:#9abd67 url(images/bkg-header-silhouette.png) no-repeat bottom;
+  background: #9abd67 url(images/silhouette-large.png) no-repeat bottom;
+  background-size: auto 24%;
   height: 350px;
   position: relative;
   color: #fff;
-  text-align: center;
+  text-align: center
 }
+
 .greeting > div {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  right: 0;
+  right: 0
 }
-.greeting h1{
-  margin-top: 0;
-  font-size: 20px;
-  font-weight: 700;
-  text-transform: uppercase;
+
+.greeting h1 {
+  margin-top: 0
 }
+
 .down-arrow {
   display: block;
-  margin: 50px auto 0;
+  margin: 50px auto 0
 }
-.greeting span{
+
+.greeting span {
   font-style: italic;
   font-size: 13px;
-  font-family: 'Droid Serif', 'Times New Roman', serif;
+  font-family: 'Droid Serif','Times New Roman',serif
 }
+
 /* ---------------------
 
-   who we are section
+   ABOUT SECTION
 
 -------------------- */
-
-.who-we-are{
-  
-}
 .iphone {
   display: block;
-  margin: 13px auto 36px auto;
+  margin: 13px auto 36px
 }
 
-.who-we-are h2{
+.who-we-are h2 {
   background: url(images/icon-man.png) no-repeat;
   height: 30px;
   padding-left: 38px;
   line-height: 30px;
   text-transform: uppercase;
-  text-align: left;
+  text-align: left
 }
 
 .video {
@@ -176,110 +198,54 @@ nav{
 
 /* --------------
 
-   services section 
+   SERVICES SECTION
 
 -------------- */
-.service-list{
-  margin: 35px 0;
+.service-list {
+  margin: 35px 0
 }
-
 
 .service-item {
-  margin: 0 0 24px;
+  margin: 0 0 24px
 }
 
-
-.service-img{
+.service-img {
   display: inline-block;
   vertical-align: top;
-  width:40px;
+  width: 40px
 }
 
-.service-info{
+.service-info {
   width: 240px;
   display: inline-block;
   vertical-align: top;
-  margin-left: 15px;
+  margin-left: 15px
 }
 
-.service-info h3{
-  margin: 0 0 8px;
-}
-.service-info p{
-  margin: 0;
-}
-.testimonials{
-  background:rgba(0,0,0,0.5);
-  color:#f7f7f7;
-  background: url(images/background.png) no-repeat;
-  background-size: cover;
-}
-.testimonial-quote{
-  border: 1px solid #f7f7f7;
-  padding: 20px 10px 26px 10px;
-  position: relative;
-}
-.testimonial-quote p{
-  font-family: 'Droid Serif', serif;
-  font-size: 12px;
-  margin: 0;
+.service-info h3 {
+  margin: 0 0 8px
 }
 
-.testimonials h2{
-  color: #f7f7f7;
-  font-size: 18px;
-}
-.testimonial-company{
-  margin: 50px 0 24px;
+.service-info p {
+  margin: 0
 }
 
-.testimonial-company img{
-  border-radius: 50%;
+/* ------------------- 
+
+    TEAM SECTION
+
+------------------- */
+.about-team {
+  background: #acd373;
+  color: #f7f7f7
 }
 
-.testimonial-company img, 
-.company-details{
-  display: inline-block;
-  vertical-align: middle;
-}
-.company-details{
- width: 190px;
+.about-team h2 {
+  color: #f7f7f7
 }
 
-.company-details{
-  margin-left: 22px;
-}
-
-.company-details h3{
-  margin-top: 0;
-  margin-bottom: 10px; 
-  text-transform: uppercase;
-}
-
-.company-details a{
-  color: rgb(247, 247, 247);
-  font-family: DroidSerif;
-  font-size: 14.8px;
-  font-style: italic;
-  text-decoration: none;
-}
-textarea{
-  display: block;
-  resize: none;
-}
-
-.social {
-  background: #ebebeb;
-  border-radius: 0 0 8px 8px;
-  text-align: center;
-  padding: 10px;
-}
-
-.left-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 0px;  
+.employee-showcase {
+  position: relative
 }
 
 .employee-card {
@@ -288,76 +254,218 @@ textarea{
   width: 200px;
   padding-top: 54px;
   background-color: #f7f7f7;
-  border-radius: 5px;
-}
-
-.headshot {   
-  position: absolute;
-  top: -40px;
-  left:58px;
-}
-
-.employee-showcase {
-  position: relative;
+  border-radius: 5px
 }
 
 .headshot {
-  
+  position: absolute;
+  top: -40px;
+  left: 58px
+}
+
+.employee-card h3,.employee-card h4 {
+  text-align: center
+}
+
+.employee-card h4 {
+  font-family: 'Droid Serif',serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #787878
+}
+
+.social {
+  background: #ebebeb;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  padding: 10px
+}
+
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0
 }
 
 .right-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 0px;
+  right: 0
 }
 
-.about-team {
-  background: #acd373;
-  color: #f7f7f7;
+.joinus {
+  margin: 0 -30px -30px;
+  background-color: #9abd67;
+  padding: 30px
 }
 
-.employee-card h3,
-.employee-card h4{
-  text-align: center
+.joinus .learn-more {
+  margin: 0
 }
 
-.about-team h2 {
-  color: #f7f7f7;
+/* ------------------- 
+
+    OUR WORK SECTION
+
+------------------- */
+.work-details {
+  display: flex;
+  height: 80px;
+  background-color: #ebebeb;
+  text-align: center;
+  align-items: center
 }
 
-.quote {
+.work-title {
+  flex: 1 0 auto
+}
+
+.work-title h3,.work-title h4 {
+  margin: 5px 0
+}
+
+.work-title h3 {
+  color: #454545
+}
+
+.work-title h4 {
+  font-family: 'Droid Serif',serif;
+  font-weight: 600;
+  font-style: italic;
+  color: #787878;
+  font-size: 12px
+}
+
+.work-item img {
   display: block
 }
 
-
-.testimonial-selector .selected{
-    background: White;
+.our-works .learn-more {
+  text-align: center;
+  margin: 50px 0
 }
 
+.marketplaces {
+  margin: 0 -30px -30px;
+  padding: 30px;
+  background-color: #ebebeb
+}
 
-.testimonial-selector span{
+.marketplaces a {
   display: inline-block;
-  height: 12px;
-  width: 12px;
-  border: 1px solid White;
-  border-radius: 50%;
+  vertical-align: top;
+  width: 49%;
+  height: 30px
 }
 
-.testimonial-selector {
-    text-align: center;
+/* ------------------- 
+
+TESTIMONIAL SECTION
+
+------------------- */
+.testimonials {
+  color: #f7f7f7;
+  background: url(images/background.png) no-repeat;
+  background-size: cover
+}
+
+.testimonials h2 {
+  color: #f7f7f7;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 66px
+}
+
+.testimonial-control {
+  margin-top: 30px
+}
+
+.testimonial-quote {
+  border: 1px solid #f7f7f7;
+  padding: 20px 10px 26px;
+  position: relative
+}
+
+.testimonial-quote p {
+  font-family: 'Droid Serif',serif;
+  font-size: 12px;
+  margin: 0
 }
 
 .quote-marks {
   position: absolute;
   right: 27px;
-  bottom: 15px;
+  bottom: 15px
 }
 
 .quote-triangle {
   position: absolute;
   left: -1px;
-  bottom: -20px;
+  bottom: -20px
+}
+
+.testimonial-company {
+  margin: 50px 0 24px
+}
+
+.testimonial-company img {
+  border-radius: 50%
+}
+
+.testimonial-company img,.company-details {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.company-details {
+  width: 190px;
+  margin-left: 22px
+}
+
+.company-details h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  text-transform: uppercase
+}
+
+.company-details a {
+  color: #f7f7f7;
+  font-family: DroidSerif;
+  font-size: 14.8px;
+  font-style: italic;
+  text-decoration: none
+}
+
+.testimonial-selector .selected {
+  background: #fff
+}
+
+.testimonial-selector span {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  border: 1px solid #fff;
+  border-radius: 50%
+}
+
+.testimonial-selector {
+  text-align: center
+}
+
+/* ------------------- 
+
+     BLOG SECTION
+
+------------------- */
+.blog {
+  padding: 30px 0 0
+}
+
+.recent-posts {
+  margin: 20px 0;
+  text-align: center
 }
 
 .blog-post {
@@ -365,100 +473,24 @@ textarea{
   display: inline-block;
   vertical-align: top;
   margin: 0 0 16px 12px;
-  position: relative;
+  position: relative
 }
 
-.blog {
-  padding: 30px 0;
+.blog-thumb {
+  display: block
 }
 
-
-
-
-.joinus {
-  margin: 0 -30px -30px;
-  background-color: #9abd67;
-  padding: 30px;
-}
-
-.work-details {
-  display: flex;
-  height: 80px;
-  background-color: #ebebeb;
-  text-align: center;
-  align-items: center;
-}
-
-.work-title {
-  flex: 1 0 auto;
-}
-
-
-.work-title h3,
-.work-title h4{
-  margin: 5px 0 ;
-}
-
-.work-title h3{
-  color: #454545;
-}
-.work-title h4{
-  font-family: 'Droid Serif', serif;
-  font-weight: 600;
-  font-style: italic;
-  color: #787878;
-  font-size: 12px;
-}
-
-
-
-.work-item img{
-  display: block;
-}
-
-.our-works .learn-more {
-  text-align: center;
-  margin: 50px 0;
-  
-}
-
-.marketplaces {
-  margin: 0 -30px -30px;
-  padding: 30px;
-  background-color: #ebebeb;
-}
-.marketplaces a{
-  display: inline-block;
-  vertical-align: top;
-  width: 49%;
-  height: 30px;
-}
-
-.recent-posts {
-  margin: 20px 0;
+.post-type {
+  position: absolute;
+  z-index: 1;
+  top: 80px;
+  left: 60px
 }
 
 .blog-title {
   background: #ebebeb;
   position: relative;
-  height: 70px;
-}
-
-.blog-thumb {
-  display: block;
-}
-
-.blog-post a {
-  display: block;
-  background: #acd373;
-  line-height: 30px;
-  height: 30px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  font-family: 'Droid Serif', serif;
-  font-style: italic;
-  font-size: 9px
+  height: 70px
 }
 
 .blog-title h3 {
@@ -470,84 +502,39 @@ textarea{
   padding: 8px;
   width: 100%;
   margin: 0;
-
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%)
 }
 
-.joinus .learn-more {
-  margin: 0;
-}
-
-.contact-form label,
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea{
+.blog-post a {
   display: block;
-  width: 100%;
-}
-input::-webkit-input-placeholder{
-  color: white;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea{
-  height: 28px;
-  -webkit-appearance:none;
-  border: 1px solid transparent;
-  background-color: #9abd67;
-  padding: 5px;
-}
-.contact-form label{
-  font-size: 14px;
-  margin: 15px 0 10px 0;
-}
-.contact-form input[type="submit"]{
-  height: 32px;
-  margin: 26px auto;
-  width: 73%;
-}
-
-.contact-form textarea{
-  height: 85px;
-  resize: none;
-}
-
-.contact {
-  color: #fff;
   background: #acd373;
-}
-.contact h2{
-  color: #fff;
-}
-
-.page-footer {
-  background: #9abd67;
-  color: #fff;
+  line-height: 30px;
+  height: 30px;
   text-align: center;
-  padding: 20px
-}
-
-.map {
-  margin: -30px -30px 0;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Droid Serif',serif;
+  font-style: italic;
+  font-size: 9px
 }
 
 .newsletter-signup {
   background: #9abd67;
   padding: 30px 10px;
-  color: white;
-  font-size: 12px;
+  color: #fff;
+  font-size: 12px
 }
-
 
 .newsletter-form {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: middle
 }
-.newsletter-form input{
-  -webkit-appearance:none;
+
+.newsletter-form input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   display: inline-block;
   vertical-align: top;
   margin: 0;
@@ -555,27 +542,181 @@ input::-webkit-input-placeholder{
   border: 1px solid #fff;
   background: transparent;
   font-size: 8px;
-  width: 110px;
+  width: 110px
 }
 
-.newsletter-form input[type="submit"]{
+.newsletter-form input[type="submit"] {
   text-indent: -99999px;
   width: 30px;
-  background: white url(images/icon-newsletter.png) no-repeat center;
+  background: #fff url(images/icon-newsletter.png) no-repeat center
 }
 
-.testimonials h2 {
-  text-align: left;
-  margin-top: 66px
+/* ------------------- 
+
+   CONTACT SECTION
+
+------------------- */
+.contact {
+  color: #fff;
+  background: #acd373;
+  padding: 0
 }
 
-.testimonial-control {
-  margin-top: 30px;
+.map {
+  height: 180px;
+  background: url(images/map-small.jpg) no-repeat center;
+  background-size: cover;
+  transition: height .5s ease
 }
 
-.post-type {
-  position: absolute;
-  z-index: 1;
-  top: 80px;
-  left:  60px;
+.contact h2 {
+  color: #fff
+}
+
+.contact-form {
+  max-width: 570px;
+  margin: 0 auto
+}
+
+input::-webkit-input-placeholder {
+  color: #fff
+}
+
+.contact-form label,.contact-form input,.contact-form textarea {
+  display: block;
+  width: 100%
+}
+
+.contact-form input,.contact-form textarea {
+  height: 28px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid transparent;
+  background-color: #9abd67;
+  padding: 5px
+}
+
+.contact-form label {
+  font-size: 14px;
+  margin: 15px 0 10px
+}
+
+.contact-form input[type="submit"] {
+  height: 32px;
+  margin: 26px auto;
+  width: 73%
+}
+
+.contact-form textarea {
+  height: 85px;
+  resize: none
+}
+
+/* ------------------- 
+
+  PAGE FOOTER
+
+------------------- */
+.page-footer {
+  background: #9abd67;
+  color: #fff;
+  text-align: center;
+  padding: 20px
+}
+
+/* ------------------- 
+
+   MEDIA QUERIES
+
+------------------- */
+@media screen and (min-width: 400px) {
+
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 16px
+  }
+
+  h1 {
+    font-size: 2em
+  }
+
+  h2 {
+    font-size: 1.667em
+  }
+
+  .greeting {
+    height: 575px
+  }
+
+  .greeting span {
+    font-size: 1.667em
+  }
+}
+
+@media screen and (min-width : 1000px) {
+  body {
+    font-size: 18px
+  }
+
+  h1 {
+    font-size: 48px
+  }
+
+  h2 {
+  }
+
+  header {
+    height: 105px
+  }
+
+  .logo {
+    margin-top: 25px
+  }
+
+  .logo img {
+    height: auto
+  }
+
+  nav {
+    width: auto;
+    height: 100%;
+    background: transparent
+  }
+
+  .site-links {
+    display: block
+  }
+
+  .site-links a {
+    color: #f7f7f7;
+    font-size: 1em;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 105px;
+    margin-right: 30px
+  }
+
+  .greeting {
+    height: 725px
+  }
+
+  .greeting span {
+    font-size: 24px
+  }
+
+  .iphone {
+    float: right
+  }
+
+  .map {
+    background-image: url(images/contact-map-large.jpg);
+    height: 500px
+  }
+}
+
+@media screen and (min-width: 1400px) {
+
 }
