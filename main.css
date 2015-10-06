@@ -108,8 +108,8 @@ header {
   position: fixed;
   width: 100%;
   z-index: 10;
-  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
-  transition: all .5s
+  box-shadow: 0 5px 5px rgba(0,0,0,0.06);
+  transition: all .5s;
 }
 
 .logo {
@@ -639,12 +639,9 @@ input::-webkit-input-placeholder {
   }
 
   h1 {
-    font-size: 2em
+    font-size: 2em;
   }
 
-  h2 {
-    font-size: 1.667em
-  }
 
   .greeting {
     height: 575px
@@ -661,7 +658,7 @@ input::-webkit-input-placeholder {
   }
 
   h1 {
-    font-size: 48px
+    font-size: 2.6em;
   }
 
   h2 {
@@ -707,8 +704,16 @@ input::-webkit-input-placeholder {
     font-size: 24px
   }
 
+  
   .iphone {
     float: right
+  }
+  .who-we-are .content{
+    max-width: 1000px;
+  margin: 50px auto;
+  }
+  .who-we-are p{
+    max-width: 400px;
   }
 
   .map {
@@ -720,3 +725,4 @@ input::-webkit-input-placeholder {
 @media screen and (min-width: 1400px) {
 
 }
+
